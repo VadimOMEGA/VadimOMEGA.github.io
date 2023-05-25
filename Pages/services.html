@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicii</title>
+    <link rel="shortcut icon" href="../Images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../CSS_files/services.css">
+    <script src="../JS_files/services.js" defer></script>
+
+    <script src="https://kit.fontawesome.com/4e5a426b26.js" crossorigin="anonymous"></script>
+
+    <!--Swiper.js-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!--Cart css and js-->
+    <link rel="stylesheet" href="../CSS_files/cart.css">
+    <script src="../JS_files/cart.js" defer></script>
+</head>
+<body>
+    
+    <header>
+        <nav class="nav1">
+            <div class="nav-left">
+                <a href="index.html"><img src="../Images/logo.png" alt="logo" class="logo" draggable="false"></a>
+                <div class="nav-links">
+                    <ul class="nav-links-list">
+                        <li class="nav-link-item"><a href="index.html">Acasă</a></li>
+                        <li class="nav-link-item"><a href="products.html">Produse</a></li>
+                        <li class="nav-link-item active-nav-link-item"><a href="#">Servicii</a></li>
+                        <li class="nav-link-item"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-links-right">
+
+                <div class="nav-cart" id="navCart1">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+
+                <a href="login.html">
+                    <div class="nav-user">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="nav2">
+        <div class="nav-left">
+            <a href="index.html"><img src="../Images/logo.png" alt="logo" class="logo" draggable="false"></a>
+            <div class="nav-links">
+                <ul class="nav-links-list">
+                    <li class="nav-link-item"><a href="index.html">Acasă</a></li>
+                    <li class="nav-link-item"><a href="products.html">Produse</a></li>
+                    <li class="nav-link-item active-nav-link-item"><a href="#">Servicii</a></li>
+                    <li class="nav-link-item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-links-right">
+
+            <div class="nav-cart" id="navCart2">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+
+            <a href="login.html">
+                <div class="nav-user">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <nav class="nav3">
+        <a href="index.html">
+            <div class="small-screen-size-nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Acasă</span>
+            </div>
+        </a>
+        <a href="products.html">
+            <div class="small-screen-size-nav-item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Produse</span>
+            </div>
+        </a>
+        <a href="#">
+            <div class="small-screen-size-nav-item active-small-screen-size-nav-item">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                Servicii
+            </div>
+        </a>
+        <a href="contact.html">
+            <div class="small-screen-size-nav-item nav3-edge-elem">
+                <i class="fa-solid fa-envelope"></i>
+                Contact
+            </div>
+        </a>
+    </nav>
+
+
+    <div class="shopping-cart-overlay"></div>
+        <div class="shopping-cart-container">
+            <div class="cart-header">
+                <h1>Coș</h1>
+                <i class="fa-solid fa-xmark" id="closeCartBtn"></i>
+            </div>
+            <div class="cart-items-box">
+                <div class="empty-cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Coșul este gol</span>
+                </div>
+            
+                <div class="swiper swiperCart">
+                    <div class="swiper-wrapper cart-swiper-wrapper">
+                        <!--Slides are generated in js-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-details-container">
+                <p>Detalii comandă</p>
+                <form action="#">
+                    <div class="adress">
+                        <i class="fa-solid fa-location-dot details-icon"></i>
+                        <input type="text" placeholder="Adresă" class="details-input">
+                        <select name="City" id="cityPicker">
+                            <option value="" hidden>Oraș</option>
+                            <option value="Chisinau">Chișinău</option>
+                            <option value="Cricova">Cricova</option>
+                            <option value="Ialoveni">Ialoveni</option>
+                            <option value="Ciorescu">Ciorescu</option>
+                            <option value="Anenii Noi">Anenii Noi</option>
+                        </select>
+                    </div>
+
+                    <div class="phone-name">
+                        <div class="phone details-field">
+                            <i class="fa-solid fa-phone details-icon"></i>
+                            <input type="text" placeholder="Telefon" class="details-input">
+                        </div>
+                        <div class="name details-field">
+                            <i class="fa-solid fa-user details-icon"></i>
+                            <input type="text" placeholder="Nume" class="details-input">
+                        </div>
+                    </div>
+
+                    <div class="card-number details-field">
+                        <i class="fa-regular fa-credit-card details-icon"></i>
+                        <input type="number" placeholder="Număr card" class="details-input card-number-input" maxlength="16">
+                        <input type="number" placeholder="CVC" class="details-input cvc-input" maxlength="3">
+                    </div>
+
+                    <div class="date-owner">
+                        <div class="date details-field">
+                            <i class="fa-regular fa-calendar details-icon"></i>
+                            <input type="text" placeholder="00/00" class="details-input">
+                        </div>
+                        <div class="owner details-field">
+                            <i class="fa-regular fa-id-card details-icon"></i>
+                            <input type="text" placeholder="Deținător" class="details-input">
+                        </div>
+                    </div>
+
+                    <div class="total">
+                        <span>Total</span>
+                        <span class="total-order-value">0 MDL</span>
+                    </div>
+                    <hr>
+                    <input type="submit" value="Comandă acum" id="submitOrder">
+                </form>
+                
+
+            </div>
+
+        </div>
+
+
+        <div class="section-title">
+            <h6>Serviciile noastre</h6>
+            <h1>Ce vă putem oferi</h1>
+            <p>De la buchete de flori elegante și aranjamente florale spectaculoase, până la cadouri personalizate și livrare rapidă</p>
+        </div>
+
+
+        <section class="services-section-one">
+
+            <div class="section-image">
+                <img src="../Images/services-page-images/service-img-1.png" alt="service">
+            </div>
+
+            <div class="section-text">
+                <h1>Cadouri personalizate</h1>
+                <p>Dacă sunteți în căutarea unui cadou floral unic și personalizat, 
+                    atunci sunteți în locul potrivit. La Floradise, putem crea cadouri personalizate 
+                    pentru a vă ajuta să spuneți exact ceea ce doriți să transmiteți. Putem personaliza 
+                    buchetele de flori cu mesaje, nume sau alte elemente speciale. 
+                    Suntem aici să vă ajutăm să faceți un cadou inedit și special pentru persoana dragă.</p>
+                <h1>Avantaje</h1>
+                <ul>
+                    <li>Flexibilitate în personalizarea cadoului</li>
+                    <li>Opțiunea de a adăuga elemente speciale, cum ar fi fotografii sau texte personalizate</li>
+                    <li>Posibilitatea de a alege dintr-o varietate largă de flori și aranjamente florale</li>
+                    <li>Posibilitatea de a alege dintr-o gamă largă de accesorii și alte cadouri</li>
+                    <li>Personalizarea buchetelor de flori cu mesaje speciale</li>
+                    <li>Ofertă de cadouri potrivite pentru orice ocazie și gust</li>
+                    <li>Experiența și creativitatea designerilor noștri în crearea de cadouri personalizate</li>
+                    <li>Prețuri accesibile și transparente</li>
+                </ul>
+                <h1>Doriți să faceți o comandă personalizată? Puteți să ne contactați la numărul: <a href="tel:+37322166266">022-166-266</a></h1>
+            </div>
+
+        </section>
+
+        <section class="services-section-two">
+            <div class="section-image">
+                <img src="../Images/services-page-images/service-img-2.png" alt="service">
+            </div>
+
+            <div class="section-text">
+                <h1>Livrare la domiciliu</h1>
+                <p>La Floradise, ne străduim să oferim cea mai bună experiență de livrare de flori pentru clienții noștri. 
+                    Lucrăm cu cele mai bune companii de transport pentru a ne asigura că florile noastre ajung la destinație 
+                    în condiții optime. De asemenea, oferim opțiuni de livrare rapidă, astfel încât florile să ajungă la 
+                    destinație în timp util și să rămână proaspete cât mai mult timp posibil. 
+                    Vă puteți baza pe noi să vă ajutăm să creați cele mai frumoase cadouri florale pentru cei dragi.</p>
+                <h1>Avantaje</h1>
+                <ul>
+                    <li>Livrare rapidă și eficientă</li>
+                    <li>Transport sigur și protejat pentru florile fragile</li>
+                    <li>Opțiuni de livrare flexibile</li>
+                    <li>Posibilitatea de a livra în mai multe locații diferite</li>
+                    <li>Posibilitatea de a programa livrarea pentru o dată și oră anumită</li>
+                    <li>Livrare în aceeași zi în unele cazuri</li>
+                    <li>Florile proaspete și în condiții optime la sosire</li>
+                    <li>Notificări prin SMS sau email cu privire la livrarea comenzii</li>
+                </ul>
+                <h1>Doriți să faceți o comandă la domiciliu? Puteți să ne contactați la numărul: <a href="tel:+37322166266">022-166-266</a></h1>
+            </div>
+        </section>
+
+        <section class="services-section-three">
+            <div class="section-image">
+                <img src="../Images/services-page-images/service-img-3.png" alt="service">
+            </div>
+
+            <div class="section-text">
+                <h1>Flori pentru evenimente</h1>
+                <p>Dacă sunteți în căutarea celor mai frumoase flori pentru evenimentul dvs., atunci vă putem ajuta. La Floradise, oferim 
+                    o gamă largă de flori pentru toate tipurile de evenimente, de la nunți și petreceri la evenimente corporative și de afaceri. 
+                    Putem crea aranjamente florale spectaculoase și buchete personalizate pentru a se potrivi temei și stilului evenimentului dvs.
+                     Cu experiența noastră și pasiunea noastră pentru florile frumoase, suntem alegerea perfectă pentru orice eveniment special.</p>
+                <h1>Avantaje</h1>
+                <ul>
+                    <li>Aranjamente florale spectaculoase și personalizate</li>
+                    <li>Posibilitatea de a alege dintr-o gamă largă de flori și culori</li>
+                    <li>Experiența designerilor noștri în realizarea de aranjamente florale</li>
+                    <li>Opțiuni de decorare cu flori pentru diferite evenimente</li>
+                    <li>Bugete personalizate pentru evenimente și opțiuni de economisire</li>
+                    <li>Comunicare clară și transparentă cu clienții înainte și în timpul evenimentului</li>
+                    <li>Livrare și instalare a aranjamentelor florale la locația evenimentului</li>
+                    <li>Servicii suplimentare, cum ar fi fotografie și filmare a evenimentului</li>
+                </ul>
+                <h1>Aveți nevoie de flori pentru un eveniment? Puteți să ne contactați la numărul: <a href="tel:+37322166266">022-166-266</a></h1>
+            </div>
+        </section>
+
+
+
+
+        <footer>
+            <div class="footer-content">
+                <div class="section-title">
+                    <h6>Abonare</h6>
+                    <h1>Buletin Informativ</h1>
+                    <p>Nu ratați cele mai noi noutăți, oferte exclusive și inspirație 
+                        florală creativă - abonați-vă acum la buletinul nostru informativ 
+                        și bucurați-vă de surprizele noastre florale direct în inbox-ul dvs.!
+                    </p>
+                </div>
+    
+                <form action="#" class="newsletter">
+                    <input type="text" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" placeholder="Email..." required>
+                    <input type="submit" value="Abonare">
+                </form>
+    
+                <hr>
+    
+                <div class="footer-social-media-icons">
+                    <a href="https://www.instagram.com"><img src="../Images/home_page_images/instagram.svg" alt="instagram" draggable="false"></a>
+                    <a href="https://www.linkedin.com"><img src="../Images/home_page_images/linkedin.svg" alt="linkedin" draggable="false"></a>
+                    <a href="https://www.facebook.com"><img src="../Images/home_page_images/facebook.svg" alt="facebook" draggable="false"></a>
+                    <a href="https://www.tiktok.com"><img src="../Images/home_page_images/tiktok.svg" alt="tiktok" draggable="false"></a>
+                    <a href="https://www.twitter.com"><img src="../Images/home_page_images/twitter.svg" alt="twitter" draggable="false"></a>
+                </div>
+    
+                <div class="copyright">
+                    <p>Floradise © s.r.l</p>
+                </div>
+            </div>
+        </footer>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+{
+  "flowers": [
+    {
+      "id": "P001",
+      "name": "Luminia Radiantia",
+      "description": "Întâlniți minunata Luminia Radiantia - o plantă de casă care va lumina orice spațiu cu frumusețea sa orbitoare. Frunzele sale mari și lucioase prezintă un luciu iridescent care strălucește în lumină, în timp ce florile delicate adaugă o explozie de culoare cu nuanțele lor vibrante. Cu cerințe minime de îngrijire și o durată lungă de viață, Luminia Radiantia este alegerea perfectă pentru iubitorii de plante care doresc o notă de magie în casele lor.",
+      "price": 70,
+      "image": "../Images/flower_database_images/plant1.png",
+      "category": "Flori de camera"
+    },
+    {
+      "id": "P002",
+      "name": "Florarium radiatum",
+      "description": "Florarium radiatum este o floare excepțională, cu petale în formă de raze strălucitoare, care emană o lumină subtilă în întuneric. Această floare misterioasă își dezvăluie frumusețea doar noaptea, oferind o priveliște magică și captivantă în grădini și parcuri.",
+      "price": 75,
+      "image": "../Images/flower_database_images/plant2.png",
+      "category": "Flori de camera"
+    },
+    {
+      "id": "P003",
+      "name": "Petalum iridescentum",
+      "description": "Petalum iridescentum este o floare fermecătoare cu petale care captează și reflectă razele soarelui într-o varietate de culori vibrante și strălucitoare. Această floare este un adevărat spectacol al naturii, schimbându-și nuanțele în funcție de unghiul de lumină și aducând o bucurie cromatică în grădini și aranjamente florale.",
+      "price": 120,
+      "image": "../Images/flower_database_images/plant3.png",
+      "category": "Copaci mici"
+    },
+    {
+      "id": "P004",
+      "name": "Flosaurum aurorale",
+      "description": "Flosaurum aurorale este o floare rară și prețioasă, care înflorește doar în zorii zilei. Petalele sale delicate și fine sunt învăluite într-o aură strălucitoare, ca și cum ar prinde primele raze ale soarelui, aducând o notă de farmec și mister în peisajele naturale.",
+      "price": 50,
+      "image": "../Images/flower_database_images/plant4.png",
+      "category": "Cactusi"
+    },
+    {
+      "id": "P005",
+      "name": "Luminaflora prismaticum",
+      "description": "Luminaflora prismaticum este o floare uluitoare, ale cărei petale emană o lumină difuză și variază în culori ca un curcubeu. Această floare fascinantă își schimbă treptat nuanțele pe măsură ce trece timpul, creând un spectacol vizual uimitor și o atmosferă magică în grădini și serelor botanice.",
+      "price": 60,
+      "image": "../Images/flower_database_images/plant5.png",
+      "category": "Flori de camera"
+    },
+    {
+      "id": "P006",
+      "name": "Stellaria fulgescens",
+      "description": "Stellaria fulgescens este o floare fermecătoare care se aseamănă cu o stea strălucitoare pe pământ. Petalele sale delicate și albe sunt presărate cu puncte luminoase, creând iluzia că razele stelare s-au coborât pe pământ, oferind o priveliște senzațională în parcuri și peisaje naturale.",
+      "price": 120,
+      "image": "../Images/flower_database_images/plant6.png",
+      "category": "Flori de camera"
+    },
+    {
+      "id": "P007",
+      "name": "Floris incantatus",
+      "description": "Descriere: Floris incantatus este o floare magică și fermecătoare, cu petale în nuanțe vibrante de mov și albastru. Această floare pare desprinsă din povești și legende, emanând o energie mistică și aducând o atmosferă de vrajă și farmec în grădini și locuri încântătoare.",
+      "price": 100,
+      "image": "../Images/flower_database_images/plant7.png",
+      "category": "Flori"
+    },
+    {
+      "id": "P008",
+      "name": "Bellis aetherica",
+      "description": "Bellis aetherica este o floare delicată și etereală, cu petale de un alb imaculat și contururi aurii. Această floare unică pare să plutească în aer, emanând un parfum subtil și aducând o notă de puritate și sublim în spațiile în care este cultivată.",
+      "price": 50,
+      "image": "../Images/flower_database_images/plant8.png",
+      "category": "Copaci mici"
+    },
+    {
+      "id": "P009",
+      "name": "Aurelia sylvestris",
+      "description": "Aurelia sylvestris este o floare minunată, cu petale aurii și un miros îmbietor de pădure. Această floare strălucitoare își dezvăluie frumusețea în locuri umbrite, aducând un strop de lumină și căldură în locurile mai întunecate ale naturii.",
+      "price": 65,
+      "image": "../Images/flower_database_images/plant9.png",
+      "category": "Cactusi"
+    },
+    {
+      "id": "P010",
+      "name": "Petalis violacea",
+      "description": "Petalis violacea este o floare fermecătoare, cu petale într-o nuanță profundă de violet. Această floare misterioasă și elegantă emană un parfum îmbătător și adaugă o notă de rafinament și mister în grădini și aranjamente florale.",
+      "price": 120,
+      "image": "../Images/flower_database_images/plant10.png",
+      "category": "Flori"
+    },
+    {
+      "id": "P011",
+      "name": "Phoenicium rubrum",
+      "description": "Phoenicium rubrum este o floare excepțională, cu petale într-un roșu intens, care amintește de penajul unui fănix înaripat. Această floare simbolizează pasiunea și regenerarea, aducând o notă de dramatism și vitalitate în orice mediu în care este cultivată.",
+      "price": 80,
+      "image": "../Images/flower_database_images/plant11.png",
+      "category": "Flori de camera"
+    },
+    {
+      "id": "P012",
+      "name": "Floracantha virentia",
+      "description": "Floracantha virentia este o floare exotică și seducătoare, cu petale în nuanțe vibrant de verde smarald. Această floare neobișnuită are o formă și o textură fascinante, adăugând o notă de mister și exotism în grădini și spații verzi.",
+      "price": 65,
+      "image": "../Images/flower_database_images/plant12.png",
+      "category": "Cactusi"
+    },
+    {
+      "id": "P013",
+      "name": "Caeliflora cœrulea",
+      "description": "Caeliflora cœrulea este o floare fascinantă, cu petale într-un albastru ceresc și strălucitor. Această floare frumoasă aduce o senzație de calm și liniște în peisajele naturale, evocând seninătatea cerului înstelat.",
+      "price": 120,
+      "image": "../Images/flower_database_images/plant13.png",
+      "category": "Copaci mici"
+    },
+    {
+      "id": "P014",
+      "name": "Radiantia fulgens",
+      "description": "Radiantia fulgens este o floare luminoasă și strălucitoare, cu petale ce emit o lumină suavă și aurie. Această floare fermecătoare aduce o notă de căldură și strălucire în orice grădină sau aranjament floral, transformând spațiul într-un adevărat colț al luminii.",
+      "price": 80,
+      "image": "../Images/flower_database_images/plant14.png",
+      "category": "Flori de camera"
+    },
+    {
+      "id": "P015",
+      "name": "Floridium argentum",
+      "description": "Floridium argentum este o floare elegantă și prețioasă, cu petale fine și argintii. Această floare reflectă lumina într-un mod subtil și adaugă o notă de rafinament și eleganță în grădini și buchete florale.",
+      "price": 65,
+      "image": "../Images/flower_database_images/plant15.png",
+      "category": "Cactusi"
+    },
+    {
+      "id": "P016",
+      "name": "Prunus noctiflora",
+      "description": "Prunus noctiflora este o floare fascinantă, care înflorește doar pe timp de noapte. Petalele sale delicate și parfumate se deschid treptat pe întuneric, emanând un miros îmbietor și aducând un farmec aparte în grădini și terase.",
+      "price": 120,
+      "image": "../Images/flower_database_images/plant16.png",
+      "category": "Copaci mici"
+    },
+    {
+      "id": "P017",
+      "name": "Veridiana campanula",
+      "description": "Veridiana campanula este o floare fermecătoare, cu petale în formă de clopoței, de un verde vibrant și suculent. Această floare aduce o notă de prospețime și vitalitate în peisajele naturale, încântând privirile și bucurând inimile cu forma și culoarea sa aparte.",
+      "price": 65,
+      "image": "../Images/flower_database_images/plant17.png",
+      "category": "Cactusi"
+    },
+    {
+      "id": "P018",
+      "name": "Rosa aurantiaca",
+      "description": "Rosa aurantiaca este o floare impresionantă, cu petale într-un portocaliu aprins și strălucitor. Această floare aduce o notă de pasiune și căldură în grădini și buchete florale, simbolizând bucuria și entuziasmul vieții.",
+      "price": 80,
+      "image": "../Images/flower_database_images/plant18.png",
+      "category": "Copaci mici"
+    },
+    {
+      "id": "P019",
+      "name": "Florigena cristallis",
+      "description": "Florigena cristallis este o floare rară și prețioasă, cu petale cristaline și strălucitoare, care reflectă lumina într-un mod spectaculos. Această floare aduce o notă de eleganță și puritate în grădini și serelor botanice, fascinând privirile cu strălucirea sa unică.",
+      "price": 65,
+      "image": "../Images/flower_database_images/plant19.png",
+      "category": "Flori"
+    },
+    {
+      "id": "P020",
+      "name": "Orchidella amethystea",
+      "description": "Orchidella amethystea este o floare excepțională, cu petale într-un mov ametist intens și vibrant. Această floare rafinată și misterioasă aduce o notă de lux și eleganță în orice mediu, captivând privirile și emanând un parfum subtil și îmbătător.",
+      "price": 120,
+      "image": "../Images/flower_database_images/plant20.png",
+      "category": "Copaci mici"
+    },
+    {
+      "id": "P021",
+      "name": "Helianthus radiatus",
+      "description": "Helianthus radiatus este o floare impresionantă, cu petale în formă de raze solare și o inimă aurie strălucitoare. Această floare simbolizează lumina și vitalitatea, aducând bucurie și căldură în orice spațiu în care este cultivată.",
+      "price": 80,
+      "image": "../Images/flower_database_images/plant21.png",
+      "category": "Flori"
+    },
+    {
+      "id": "P022",
+      "name": "Floralis argenteus",
+      "description": "Floralis argenteus este o floare elegantă și rafinată, cu petale subțiri și argintii. Această floare emană un farmec subtil și adaugă o notă de lux și eleganță în aranjamentele florale și grădinile în care este prezentă.",
+      "price": 65,
+      "image": "../Images/flower_database_images/plant22.png",
+      "category": "Cactusi"
+    },
+    {
+      "id": "P023",
+      "name": "Albaflora candelaria",
+      "description": "Albaflora candelaria este o floare minunată, cu petale albe strălucitoare și o formă asemănătoare cu o candelă. Această floare emană o lumină delicată și aduce o notă de lumină și puritate în spațiile în care este cultivată, creând o atmosferă relaxantă și senină.",
+      "price": 120,
+      "image": "../Images/flower_database_images/plant23.png",
+      "category": "Copaci mici"
+    },
+    {
+      "id": "P024",
+      "name": "Florigerus celestialis",
+      "description": "Florigerus celestialis este o floare impresionantă, cu petale albastre și strălucitoare, asemănătoare cu cerul senin. Această floare aduce o notă de liniște și armonie în peisajele naturale, evocând serenitatea și frumusețea infinită a cerului.",
+      "price": 80,
+      "image": "../Images/flower_database_images/plant24.png",
+      "category": "Cactusi"
+    },
+    {
+      "id": "P025",
+      "name": "Violeta luminaflora",
+      "description": "Violeta luminaflora este o floare delicată și fermecătoare, cu petale în nuanțe de violet și o strălucire suavă. Această floare adaugă o notă de mister și eleganță în grădini și spații interioare, fiind un simbol al sensibilității și frumuseții.",
+      "price": 65,
+      "image": "../Images/flower_database_images/plant25.png",
+      "category": "Flori"
+    },
+    {
+      "id": "P026",
+      "name": "Solisphaera aurora",
+      "description": "Solisphaera aurora este o floare uimitoare, cu petale aurii și o formă sferică perfectă. Această floare pare să fi prins în interiorul său primele raze ale zorilor, aducând o notă de magie și lumină în peisaje și grădini.",
+      "price": 120,
+      "image": "../Images/flower_database_images/plant26.png",
+      "category": "Flori"
+    },
+    {
+      "id": "P027",
+      "name": "Florifera carmesia",
+      "description": "Florifera carmesia este o floare fermecătoare, cu petale într-un roșu intens și strălucitor. Această floare simbolizează pasiunea și iubirea arzătoare, aducând o notă de căldură și romantism în aranjamentele florale și grădinile în care este prezentă.",
+      "price": 65,
+      "image": "../Images/flower_database_images/plant27.png",
+      "category": "Flori"
+    }
+  ]
+}

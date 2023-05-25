@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact</title>
+        <link
+            rel="shortcut icon"
+            href="../Images/favicon.png"
+            type="image/x-icon"
+        />
+
+        <link rel="stylesheet" href="../CSS_files/contact.css" />
+        <script src="../JS_files/contact.js" defer></script>
+
+        <script
+            src="https://kit.fontawesome.com/4e5a426b26.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <!--Swiper.js-->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+        <!--Cart css and js-->
+        <link rel="stylesheet" href="../CSS_files/cart.css" />
+        <script src="../JS_files/cart.js" defer></script>
+
+        <!--Map leaflet css and js-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+
+    </head>
+    <body>
+        <header>
+            <nav class="nav1">
+                <div class="nav-left">
+                    <a href="index.html"
+                        ><img
+                            src="../Images/logo.png"
+                            alt="logo"
+                            class="logo"
+                            draggable="false"
+                    /></a>
+                    <div class="nav-links">
+                        <ul class="nav-links-list">
+                            <li class="nav-link-item">
+                                <a href="index.html">Acasă</a>
+                            </li>
+                            <li class="nav-link-item">
+                                <a href="products.html">Produse</a>
+                            </li>
+                            <li class="nav-link-item">
+                                <a href="services.html">Servicii</a>
+                            </li>
+                            <li class="nav-link-item active-nav-link-item">
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-links-right">
+                    <div class="nav-cart" id="navCart1">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+
+                    <a href="login.html">
+                        <div class="nav-user">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <nav class="nav2">
+            <div class="nav-left">
+                <a href="index.html"
+                    ><img
+                        src="../Images/logo.png"
+                        alt="logo"
+                        class="logo"
+                        draggable="false"
+                /></a>
+                <div class="nav-links">
+                    <ul class="nav-links-list">
+                        <li class="nav-link-item">
+                            <a href="index.html">Acasă</a>
+                        </li>
+                        <li class="nav-link-item">
+                            <a href="products.html">Produse</a>
+                        </li>
+                        <li class="nav-link-item">
+                            <a href="services.html">Servicii</a>
+                        </li>
+                        <li class="nav-link-item active-nav-link-item">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-links-right">
+                <div class="nav-cart" id="navCart2">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+
+                <a href="login.html">
+                    <div class="nav-user">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                </a>
+            </div>
+        </nav>
+
+        <nav class="nav3">
+            <a href="index.html">
+                <div class="small-screen-size-nav-item">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Acasă</span>
+                </div>
+            </a>
+            <a href="products.html">
+                <div class="small-screen-size-nav-item">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Produse</span>
+                </div>
+            </a>
+            <a href="services.html">
+                <div class="small-screen-size-nav-item">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    Servicii
+                </div>
+            </a>
+            <a href="#">
+                <div class="small-screen-size-nav-item nav3-edge-elem active-small-screen-size-nav-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    Contact
+                </div>
+            </a>
+        </nav>
+
+        <div class="shopping-cart-overlay"></div>
+        <div class="shopping-cart-container">
+            <div class="cart-header">
+                <h1>Coș</h1>
+                <i class="fa-solid fa-xmark" id="closeCartBtn"></i>
+            </div>
+            <div class="cart-items-box">
+                <div class="empty-cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Coșul este gol</span>
+                </div>
+
+                <div class="swiper swiperCart">
+                    <div class="swiper-wrapper cart-swiper-wrapper">
+                        <!--Slides are generated in js-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-details-container">
+                <p>Detalii comandă</p>
+                <form action="#">
+                    <div class="adress">
+                        <i class="fa-solid fa-location-dot details-icon"></i>
+                        <input
+                            type="text"
+                            placeholder="Adresă"
+                            class="details-input"
+                        />
+                        <select name="City" id="cityPicker">
+                            <option value="" hidden>Oraș</option>
+                            <option value="Chisinau">Chișinău</option>
+                            <option value="Cricova">Cricova</option>
+                            <option value="Ialoveni">Ialoveni</option>
+                            <option value="Ciorescu">Ciorescu</option>
+                            <option value="Anenii Noi">Anenii Noi</option>
+                        </select>
+                    </div>
+
+                    <div class="phone-name">
+                        <div class="phone details-field">
+                            <i class="fa-solid fa-phone details-icon"></i>
+                            <input
+                                type="text"
+                                placeholder="Telefon"
+                                class="details-input"
+                            />
+                        </div>
+                        <div class="name details-field">
+                            <i class="fa-solid fa-user details-icon"></i>
+                            <input
+                                type="text"
+                                placeholder="Nume"
+                                class="details-input"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="card-number details-field">
+                        <i class="fa-regular fa-credit-card details-icon"></i>
+                        <input
+                            type="number"
+                            placeholder="Număr card"
+                            class="details-input card-number-input"
+                            maxlength="16"
+                        />
+                        <input
+                            type="number"
+                            placeholder="CVC"
+                            class="details-input cvc-input"
+                            maxlength="3"
+                        />
+                    </div>
+
+                    <div class="date-owner">
+                        <div class="date details-field">
+                            <i class="fa-regular fa-calendar details-icon"></i>
+                            <input
+                                type="text"
+                                placeholder="00/00"
+                                class="details-input"
+                            />
+                        </div>
+                        <div class="owner details-field">
+                            <i class="fa-regular fa-id-card details-icon"></i>
+                            <input
+                                type="text"
+                                placeholder="Deținător"
+                                class="details-input"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="total">
+                        <span>Total</span>
+                        <span class="total-order-value">0 MDL</span>
+                    </div>
+                    <hr />
+                    <input
+                        type="submit"
+                        value="Comandă acum"
+                        id="submitOrder"
+                    />
+                </form>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h6>Contact</h6>
+            <h1>Cum ne puteti contacta</h1>
+            <p>
+                Aveți vreo întrebare sau unele obiecții? Ne puteți lăsa un
+                mesaj, iar noi vom reveni cu un raspuns cat de curând
+            </p>
+        </div>
+
+        <section class="feedback-section">
+            <div class="feedback-section-left">
+                <h1>Trimiteți un mesaj</h1>
+                <p>
+                    Trimiteți un mesaj acum si veți primi un raspuns de la
+                    echipa noastră în decurs de 24h.
+                </p>
+
+                <form action="#">
+                    <div class="feedback-grid-container">
+                        <div class="name">
+                            <label for="name-input">Nume</label>
+                            <input type="text" id="name-input" required/>
+                        </div>
+                        <div class="Email">
+                            <label for="email-input">Email</label>
+                            <input type="text" id="email-input" required/>
+                        </div>
+                        <div class="city">
+                            <label for="city-input">Oraș</label>
+                            <input type="text" id="city-input" required/>
+                        </div>
+                        <div class="phone">
+                            <label for="phone-input">Telefon</label>
+                            <input type="text" id="phone-input" required/>
+                        </div>
+                        <div class="message">
+                            <label for="message-input">Mesaj</label>
+                            <input type="text" id="message-input" required/>
+                        </div>
+                    </div>
+                    <input type="submit" value="Trimite">
+                </form>
+            </div>
+
+            <div class="vertical-line"></div>
+
+            <div class="feedback-section-right">
+                <h1>Telefon</h1>
+                <p>Pentru a vă oferi cele mai bune soluții personalizate, 
+                    vă invităm să ne sunați la numărul nostru de telefon și 
+                    să discutăm despre cerințele și nevoile dvs.</p>
+                <div class="contact-icon">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>022-166-266</span>
+                </div>
+                <h1>Adresă</h1>
+                <p>Suntem mereu bucuroși să vă întâmpinăm în magazinul nostru și
+                    să vă oferim o experiență de cumpărături plăcută și inspirațională. 
+                    Vă așteptăm cu drag!
+                </p>
+                <div class="contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>str. Vasile Alecsandri, 1</span>
+                </div>
+                <h1>E-mail</h1>
+                <p>Dacă aveți întrebări, nelămuriri sau feedback, vă rugăm să ne scrieți 
+                    un email și vom fi bucuroși să vă ajutăm în cel mai scurt timp posibil.
+                </p>
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>floradise@flor.md</span>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="map-container">
+            <div id="map"></div>
+        </section>
+
+        <section class="faq-section">
+            <div class="faq-title-left">
+                <span>FAQ</span>
+                <h1>Întrebări adresate frecvent.</h1>
+            </div>
+
+            <div class="questions-container">
+
+                <div class="question-box">
+                    <div class="question-and-icon">
+                        <span class="question">Cum pot să comand flori online de la Floradise?</span>
+                        <i class="fa-solid fa-angle-down question-icon"></i>
+                    </div>
+                    <p class="answer">La Floradise, puteți comanda flori online accesând site-ul nostru oficial 
+                        și selectând buchetul dorit din gama noastră variată de aranjamente florale. 
+                        Completați detaliile de livrare și finalizați comanda prin procesul simplu de plată.</p>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-and-icon">
+                        <span class="question">Care este intervalul de timp pentru livrarea florilor?</span>
+                        <i class="fa-solid fa-angle-down question-icon"></i>
+                    </div>
+                    <p class="answer">La Floradise, oferim livrare rapidă și eficientă a florilor. De obicei, 
+                        livrăm comenzi în intervalul de 24-48 de ore de la plasarea acestora.</p>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-and-icon">
+                        <span class="question">Ce modalități de plată sunt acceptate?</span>
+                        <i class="fa-solid fa-angle-down question-icon"></i>
+                    </div>
+                    <p class="answer">Acceptăm plata cu cardul de credit/debit Visa sau Mastercard</p>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-and-icon">
+                        <span class="question">Pot comanda flori pentru a fi livrate în afara orașului/țării?</span>
+                        <i class="fa-solid fa-angle-down question-icon"></i>
+                    </div>
+                    <p class="answer">Nu, la Floradise nu oferim servicii de livrare internațională, dar oferim livrare în majoritatea
+                        orașelor din Moldova.
+                    </p>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-and-icon">
+                        <span class="question">Ce se întâmplă dacă destinatarul nu este acasă în momentul livrării?</span>
+                        <i class="fa-solid fa-angle-down question-icon"></i>
+                    </div>
+                    <p class="answer">În cazul în care destinatarul nu se află la adresa de livrare, vom încerca să contactăm 
+                        destinatarul pentru a stabili un alt moment potrivit pentru 
+                        livrare sau vom lăsa un bilet de notificare pentru a programa o nouă livrare.</p>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-and-icon">
+                        <span class="question">Există opțiuni de personalizare pentru buchetele de flori?</span>
+                        <i class="fa-solid fa-angle-down question-icon"></i>
+                    </div>
+                    <p class="answer">Da, la Floradise vă oferim opțiuni de personalizare pentru buchetele de flori.
+                         Puteți adăuga accesorii suplimentare, să alegeți combinații specifice de flori sau să solicitați
+                         un aranjament floral personalizat în funcție de preferințele dumneavoastră.</p>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-and-icon">
+                        <span class="question">Pot anula sau modifica o comandă deja plasată?</span>
+                        <i class="fa-solid fa-angle-down question-icon"></i>
+                    </div>
+                    <p class="answer">Da, puteți anula sau modifica o comandă deja plasată, cu condiția să ne contactați cât mai
+                         curând posibil prin telefon sau prin intermediul formularului de contact de pe site-ul nostru. 
+                         Vă rugăm să aveți în vedere că
+                         anumite modificări pot fi efectuate numai cu o anumită notificare prealabilă.</p>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-and-icon">
+                        <span class="question">Ce se întâmplă dacă nu sunt mulțumit cu comanda mea de flori?</span>
+                        <i class="fa-solid fa-angle-down question-icon question-icon"></i>
+                    </div>
+                    <p class="answer">La Floradise, ne dorim să oferim clienților noștri cea mai 
+                        bună experiență. Dacă nu sunteți mulțumit cu comanda dumneavoastră de flori, vă 
+                        rugăm să ne contactați în termen de 24 de ore de la primirea acesteia și vom căuta 
+                        să rezolvăm problema într-un mod satisfăcător, oferindu-vă soluții sau posibilitatea 
+                        returnării și înlocuirii produselor, conform politicii noastre de retur și rambursare.</p>
+                </div>
+                
+            </div>
+
+            
+        </section>
+
+
+        <footer>
+            <div class="footer-content">
+                <div class="section-title">
+                    <h6>Abonare</h6>
+                    <h1>Buletin Informativ</h1>
+                    <p>
+                        Nu ratați cele mai noi noutăți, oferte exclusive și
+                        inspirație florală creativă - abonați-vă acum la
+                        buletinul nostru informativ și bucurați-vă de surprizele
+                        noastre florale direct în inbox-ul dvs.!
+                    </p>
+                </div>
+
+                <form action="#" class="newsletter">
+                    <input
+                        type="text"
+                        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                        placeholder="Email..."
+                        required
+                    />
+                    <input type="submit" value="Abonare" />
+                </form>
+
+                <hr />
+
+                <div class="footer-social-media-icons">
+                    <a href="https://www.instagram.com"
+                        ><img
+                            src="../Images/home_page_images/instagram.svg"
+                            alt="instagram"
+                            draggable="false"
+                    /></a>
+                    <a href="https://www.linkedin.com"
+                        ><img
+                            src="../Images/home_page_images/linkedin.svg"
+                            alt="linkedin"
+                            draggable="false"
+                    /></a>
+                    <a href="https://www.facebook.com"
+                        ><img
+                            src="../Images/home_page_images/facebook.svg"
+                            alt="facebook"
+                            draggable="false"
+                    /></a>
+                    <a href="https://www.tiktok.com"
+                        ><img
+                            src="../Images/home_page_images/tiktok.svg"
+                            alt="tiktok"
+                            draggable="false"
+                    /></a>
+                    <a href="https://www.twitter.com"
+                        ><img
+                            src="../Images/home_page_images/twitter.svg"
+                            alt="twitter"
+                            draggable="false"
+                    /></a>
+                </div>
+
+                <div class="copyright">
+                    <p>Floradise © s.r.l</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

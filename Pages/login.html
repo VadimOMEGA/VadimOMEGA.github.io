@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In/Sign Up</title>
+    <link rel="shortcut icon" href="../Images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../CSS_files/login.css">
+    <script src="../JS_files/login.js" defer></script>
+</head>
+<body>
+    
+    <div class="overlay"></div>
+
+    <div class="login-container">
+        <div class="flipper">
+            <div class="front">
+                <div class="logo">
+                    <a href="index.html"><img src="../Images/logo.png" alt="logo"></a>
+                </div>
+        
+                <div class="log-in-form form-container">
+
+                    <div class="inner-form-container">
+                        <h1>Bine ați revenit!</h1>
+                        <h6 class="subtitle">Bun venit! Completați caselete cu detaliile dvs.</h6>
+
+                        <form action="index.html">
+                            <label for="Email">Email</label>
+                            <input type="email" id="Email" placeholder="exemplu@gmail.com">
+
+                            <label for="password-front">Palorla</label>
+                            <input type="password" id="password-front" placeholder="﹡﹡﹡﹡﹡﹡">
+
+                            <h6><span>Ați uitat parola?</span></h6>
+
+                            <input type="submit" value="Logare">
+                        </form>
+
+                        <div class="google-sign-in">
+                            <img src="../Images/log_in_images/google-icon.svg" alt="icon">
+                            <span>Logare cu Google</span>
+                        </div>
+
+                        <h6 class="no-account">Nu aveți un cont? <span>Creați unul</span></h6>
+                    </div>
+
+                </div>
+            </div>
+            <div class="back">
+
+                <div class="logo">
+                    <a href="index.html"><img src="../Images/logo.png" alt="logo"></a>
+                </div>
+        
+                <div class="log-in-form form-container">
+
+                    <div class="inner-form-container">
+                        <h1>Bine ați venit!</h1>
+                        <h6 class="subtitle">Bun venit! Completați formularul de înregistrare</h6>
+
+                        <form action="index.html" id="sign-up-form">
+                            <label for="Email-back">Email</label>
+                            <input type="email" id="Email-back" placeholder="exemplu@gmail.com" required>
+
+                            <label for="password-back">Palorla</label>
+                            <input type="password" id="password-back" placeholder="﹡﹡﹡﹡﹡﹡" required>
+
+                            <label for="password-repeat">Repetare palorla</label>
+                            <input type="password" id="password-repeat" placeholder="﹡﹡﹡﹡﹡﹡" required>
+
+                            <input type="submit" value="Creare cont">
+                        </form>
+
+                        <div class="google-sign-in">
+                            <img src="../Images/log_in_images/google-icon.svg" alt="icon">
+                            <span>Logare cu Google</span>
+                        </div>
+
+                        <h6 class="yes-account">Aveți deja un cont? <span>Logați-vă</span></h6>
+                    </div>
+
+                </div>
+                
+            </div>
+          </div>
+    </div>
+
+
+
+</body>
+</html>

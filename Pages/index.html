@@ -1,0 +1,489 @@
+<!--https://codepen.io/MarvinRudolph/pen/VNMXWO loader-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acasă</title>
+    <link rel="shortcut icon" href="../Images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS_files/home.css">
+    <script src="../JS_files/home.js" defer></script>
+    <script src="https://kit.fontawesome.com/4e5a426b26.js" crossorigin="anonymous"></script>
+
+    <!--Swiper.js-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!--Cart css and js-->
+    <link rel="stylesheet" href="../CSS_files/cart.css">
+    <script src="../JS_files/cart.js" defer></script>
+</head>
+<body>
+
+
+    <div class="shopping-cart-overlay"></div>
+        <div class="shopping-cart-container">
+            <div class="cart-header">
+                <h1>Coș</h1>
+                <i class="fa-solid fa-xmark" id="closeCartBtn"></i>
+            </div>
+            <div class="cart-items-box">
+                <div class="empty-cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Coșul este gol</span>
+                </div>
+
+                <div class="swiper swiperCart">
+                    <div class="swiper-wrapper cart-swiper-wrapper">
+                        <!--Slides are generated in js-->
+                </div>   
+            </div>
+            
+            </div>
+
+            <div class="payment-details-container">
+                <p>Detalii comandă</p>
+                <form action="#">
+                    <div class="adress">
+                        <i class="fa-solid fa-location-dot details-icon"></i>
+                        <input type="text" placeholder="Adresă" class="details-input">
+                        <select name="City" id="cityPicker">
+                            <option value="" hidden>Oraș</option>
+                            <option value="Chisinau">Chișinău</option>
+                            <option value="Cricova">Cricova</option>
+                            <option value="Ialoveni">Ialoveni</option>
+                            <option value="Ciorescu">Ciorescu</option>
+                            <option value="Anenii Noi">Anenii Noi</option>
+                        </select>
+                    </div>
+
+                    <div class="phone-name">
+                        <div class="phone details-field">
+                            <i class="fa-solid fa-phone details-icon"></i>
+                            <input type="text" placeholder="Telefon" class="details-input">
+                        </div>
+                        <div class="name details-field">
+                            <i class="fa-solid fa-user details-icon"></i>
+                            <input type="text" placeholder="Nume" class="details-input">
+                        </div>
+                    </div>
+
+                    <div class="card-number details-field">
+                        <i class="fa-regular fa-credit-card details-icon"></i>
+                        <input type="number" placeholder="Număr card" class="details-input card-number-input" maxlength="16">
+                        <input type="number" placeholder="CVC" class="details-input cvc-input" maxlength="3">
+                    </div>
+
+                    <div class="date-owner">
+                        <div class="date details-field">
+                            <i class="fa-regular fa-calendar details-icon"></i>
+                            <input type="text" placeholder="00/00" class="details-input">
+                        </div>
+                        <div class="owner details-field">
+                            <i class="fa-regular fa-id-card details-icon"></i>
+                            <input type="text" placeholder="Deținător" class="details-input">
+                        </div>
+                    </div>
+
+                    <div class="total">
+                        <span>Total</span>
+                        <span class="total-order-value">0 MDL</span>
+                    </div>
+                    <hr>
+                    <input type="submit" value="Comandă acum" id="submitOrder">
+                </form>
+                
+
+            </div>
+
+        </div>
+
+        <nav class="nav3">
+            <a href="#">
+                <div class="small-screen-size-nav-item active-small-screen-size-nav-item">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Acasă</span>
+                </div>
+            </a>
+            <a href="products.html">
+                <div class="small-screen-size-nav-item">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Produse</span>
+                </div>
+            </a>
+            <a href="services.html">
+                <div class="small-screen-size-nav-item">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    Servicii
+                </div>
+            </a>
+            <a href="contact.html">
+                <div class="small-screen-size-nav-item nav3-edge-elem">
+                    <i class="fa-solid fa-envelope"></i>
+                    Contact
+                </div>
+            </a>
+        </nav>
+
+    
+    <header>
+        <nav class="nav1">
+            <div class="nav-left">
+                <a href="#"><img src="../Images/logo.png" alt="logo" class="logo" draggable="false"></a>
+                <div class="nav-links">
+                    <ul class="nav-links-list">
+                        <li class="nav-link-item active-nav-link-item"><a href="#">Acasă</a></li>
+                        <li class="nav-link-item"><a href="products.html">Produse</a></li>
+                        <li class="nav-link-item"><a href="services.html">Servicii</a></li>
+                        <li class="nav-link-item"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-links-right">
+
+                <div class="nav-cart" id="navCart1">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+
+                <a href="login.html">
+                    <div class="nav-user">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                </a>
+            </div>
+        </nav>
+
+        <div class="header-content">
+            <div class="header-content-left">
+                <h1 id="headerTitle">Înflorește cu noi</h1>
+                <h6 id="headerSubtitle">Floraria noastră se angajează să vă ajute să aduceți frumusețe și bucurie în viața dumneavoastră, oferind cele mai proaspete și vibrante flori.</h6>
+                <a href="#categoriesSectionAnchor"><button class="discover-btn" id="discoverBtn">Descoperă</button></a>
+                <!--<div class="circle-nav-container">
+                    <div class="circle active-circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>-->
+            </div>
+            <div class="header-content-right">
+                <img src="../Images/home_page_images/home_header_plant1.png" alt="plant1" draggable="false">
+            </div>
+        </div>
+
+    </header>
+
+    <nav class="nav2">
+        <div class="nav-left">
+            <a href="#"><img src="../Images/logo.png" alt="logo" class="logo" draggable="false"></a>
+            <div class="nav-links">
+                <ul class="nav-links-list">
+                    <li class="nav-link-item active-nav-link-item"><a href="#">Acasă</a></li>
+                    <li class="nav-link-item"><a href="products.html">Produse</a></li>
+                    <li class="nav-link-item"><a href="services.html">Servicii</a></li>
+                    <li class="nav-link-item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-links-right">
+            <div class="nav-cart" id="navCart2">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+
+            <a href="login.html">
+                <div class="nav-user">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <hr id="categoriesSectionAnchor" style="opacity: 0;">
+
+    <section class="categories">
+        <div class="section-title">
+            <h6>colecțiile noastre</h6>
+            <h1>Colecții populare</h1>
+            <p>Descoperiți frumusețea naturii în colecțiile noastre rafinate de flori - veniți la Floradise</p>
+        </div>
+
+            <div class="categories-box">
+                <div class="categories-box-left">
+                    <div class="categories-box-item-large">
+                        <div class="categories-text">
+                            <span class="slogan">Plante cu personalitate!</span>
+                            <span class="category-name">Colecție de cactuși</span>
+                            <a href="products.html">
+                                <span class="buy-now">Cumpără acum</span>
+                            </a>
+                        </div>
+                        <div class="categories-image">
+                            <img src="../Images/home_page_images/home_cactus_category.png" alt="cactus">
+                        </div>
+                    </div>
+
+                    <div class="categories-box-item-small">
+                        <div class="categories-text">
+                            <span class="slogan">Eleganță naturală!</span>
+                            <span class="category-name">Colecție de copaci mici</span>
+                            <a href="products.html">
+                                <span class="buy-now">Cumpără acum</span>
+                            </a>
+                        </div>
+                        <div class="categories-image">
+                            <img src="../Images/home_page_images/home_tree_category.png" alt="tree">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="categories-box-right">
+                    <div class="categories-box-item-small">
+                        <div class="categories-text">
+                            <span class="slogan">Răsfăț pentru simțuri!</span>
+                            <span class="category-name">Colecție de flori decorative</span>
+                            <a href="products.html">
+                                <span class="buy-now">Cumpără acum</span>
+                            </a>
+                        </div>
+                        <div class="categories-image">
+                            <img src="../Images/home_page_images/home_dec_flower_category.png" alt="tree">
+                        </div>
+                    </div>
+
+                    <div class="categories-box-item-large">
+                        <div class="categories-text">
+                            <span class="slogan">Înfrumusețează-ți viața floral!</span>
+                            <span class="category-name">Colecție de flori pentru
+                                evenimente</span>
+                            <a href="products.html">
+                                <span class="buy-now">Cumpără acum</span>
+                            </a>
+                        </div>
+                        <div class="categories-image">
+                            <img src="../Images/home_page_images/home_bouquet_category.png" alt="cactus">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="home-products-slider-section">
+        <div class="section-title">
+            <h6>produsele noastre</h6>
+            <h1>Produse noi</h1>
+            <p>Descoperă noile noastre buchete și aranjamente florale proaspete</p>
+        </div>
+
+        <div class="swiper home-products-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slider-product-image" id="P001">
+                    <div class="label">New</div>
+                    <a href="product_blank.html"><img src="../Images/home_page_images/home_slider_images/plant1.png" alt="plant1"></a>
+                    <button class="add-to-cart">Adaugă în coș</button>
+                </div>
+                <div class="slider-product-text">
+                    <span class="name">Luminia Radiantia</span>
+                    <span class="price">70 MDL</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-product-image" id="P002">
+                    <div class="label">New</div>
+                    <a href="product_blank.html"><img src="../Images/home_page_images/home_slider_images/plant2.png" alt="plant1"></a>
+                    <button class="add-to-cart">Adaugă în coș</button>
+                </div>
+                <div class="slider-product-text">
+                    <span class="name">Florarium radiatum</span>
+                    <span class="price">75 MDL</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-product-image" id="P003">
+                    <div class="label">New</div>
+                    <a href="product_blank.html"><img src="../Images/home_page_images/home_slider_images/plant3.png" alt="plant1"></a>
+                    <button class="add-to-cart">Adaugă în coș</button>
+                </div>
+                <div class="slider-product-text">
+                    <span class="name">Petalum iridescentum</span>
+                    <span class="price">120 MDL</span>
+                </div>
+              </div>
+              <div class="swiper-slide" id="P004">
+                <div class="slider-product-image" id="P004">
+                    <div class="label">New</div>
+                    <a href="product_blank.html"><img src="../Images/home_page_images/home_slider_images/plant4.png" alt="plant1"></a>
+                    <button class="add-to-cart">Adaugă în coș</button>
+                </div>
+                <div class="slider-product-text">
+                    <span class="name">Flosaurum aurorale</span>
+                    <span class="price">50 MDL</span>
+                </div>
+              </div>
+              <div class="swiper-slide" id="P005">
+                <div class="slider-product-image" id="P005">
+                    <div class="label">New</div>
+                    <a href="product_blank.html"><img src="../Images/home_page_images/home_slider_images/plant5.png" alt="plant1"></a>
+                    <button class="add-to-cart">Adaugă în coș</button>
+                </div>
+                <div class="slider-product-text">
+                    <span class="name">Luminaflora prismaticum</span>
+                    <span class="price">60 MDL</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-product-image" id="P006">
+                    <div class="label">New</div>
+                    <a href="product_blank.html"><img src="../Images/home_page_images/home_slider_images/plant6.png" alt="plant1"></a>
+                    <button class="add-to-cart">Adaugă în coș</button>
+                </div>
+                <div class="slider-product-text">
+                    <span class="name">Stellaria fulgescens</span>
+                    <span class="price">120 MDL</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-product-image" id="P007">
+                    <div class="label">New</div>
+                    <a href="product_blank.html"><img src="../Images/home_page_images/home_slider_images/plant7.png" alt="plant1"></a>
+                    <button class="add-to-cart">Adaugă în coș</button>
+                </div>
+                <div class="slider-product-text">
+                    <span class="name">Floris incantatus</span>
+                    <span class="price">100 MDL</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-product-image" id="P008">
+                    <div class="label">New</div>
+                    <a href="product_blank.html"><img src="../Images/home_page_images/home_slider_images/plant8.png" alt="plant1"></a>
+                    <button class="add-to-cart">Adaugă în coș</button>
+                </div>
+                <div class="slider-product-text">
+                    <span class="name">Bellis aetherica</span>
+                    <span class="price">50 MDL</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-product-image" id = "P009">
+                    <div class="label">New</div>
+                    <a href="product_blank.html"><img src="../Images/home_page_images/home_slider_images/plant9.png" alt="plant1"></a>
+                    <button class="add-to-cart">Adaugă în coș</button>
+                </div>
+                <div class="slider-product-text">
+                    <span class="name">Aurelia sylvestris</span>
+                    <span class="price">65 MDL</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-product-image" id="P010">
+                    <div class="label">New</div>
+                    <a href="product_blank.html"><img src="../Images/home_page_images/home_slider_images/plant10.png" alt="plant1"></a>
+                    <button class="add-to-cart">Adaugă în coș</button>
+                </div>
+                <div class="slider-product-text">
+                    <span class="name">Petalis violacea</span>
+                    <span class="price">120 MDL</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="show-all-products-container">
+                <a href="products.html"><button class="show-all-products">Vezi toate produsele</button></a>
+            </div>
+
+    </section>
+
+    <section class="home-page-reviews">
+        <div class="section-title">
+            <h6>Feedback</h6>
+            <h1>Recenziile clienților</h1>
+            <p>Află ce spun alți clienți despre produsele noastre de calitate și serviciile noastre impecabile</p>
+        </div>
+
+        <div class="review-box-container">
+            <div class="review-box">
+                <div class="stars">
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <div class="review-box-text">"Floradise este locul meu preferat pentru a cumpăra flori. 
+                    Am cumpărat un aranjament floral pentru nunta mea și a fost absolut superb. 
+                    Invitații noștri au fost impresionați și l-au admirat pe toată durata petrecerii. 
+                    Mulțumesc, Floradise!"</div>
+                <div class="review-box-author">Ana M.</div>
+                <div class="quotes"><img src="../Images/home_page_images/quotes-icon.svg" alt="quotes" draggable="false"></div>
+            </div>
+            <div class="review-box higher-review-box">
+                <div class="stars">
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <div class="review-box-text">"Am cumpărat un buchet de trandafiri de la Floradise pentru 
+                    aniversarea soției mele și am fost foarte mulțumit de calitatea florilor și de serviciile 
+                    lor. Au făcut tot posibilul pentru a asigura livrarea buchetului la timp și au fost foarte 
+                    atenți la toate detaliile."</div>
+                <div class="review-box-author">Ionuț T.</div>
+                <div class="quotes"><img src="../Images/home_page_images/quotes-icon.svg" alt="quotes" draggable="false"></div>
+            </div>
+            <div class="review-box">
+                <div class="stars">
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <div class="review-box-text">"Am cumpărat un buchet de flori pentru mama mea de la Floradise și a 
+                    fost o experiență minunată. Au o varietate largă de flori de calitate, iar personalul lor a fost 
+                    foarte amabil și a oferit sfaturi utile în alegerea buchetului potrivit."</div>
+                <div class="review-box-author">Maria B.</div>
+                <div class="quotes"><img src="../Images/home_page_images/quotes-icon.svg" alt="quotes" draggable="false"></div>
+            </div>
+        </div>       
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="section-title">
+                <h6>Abonare</h6>
+                <h1>Buletin Informativ</h1>
+                <p>Nu ratați cele mai noi noutăți, oferte exclusive și inspirație 
+                    florală creativă - abonați-vă acum la buletinul nostru informativ 
+                    și bucurați-vă de surprizele noastre florale direct în inbox-ul dvs.!
+                </p>
+            </div>
+
+            <form action="#" class="newsletter">
+                <input type="text" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" placeholder="Email..." required>
+                <input type="submit" value="Abonare">
+            </form>
+
+            <hr>
+
+            <div class="footer-social-media-icons">
+                <a href="https://www.instagram.com"><img src="../Images/home_page_images/instagram.svg" alt="instagram" draggable="false"></a>
+                <a href="https://www.linkedin.com"><img src="../Images/home_page_images/linkedin.svg" alt="linkedin" draggable="false"></a>
+                <a href="https://www.facebook.com"><img src="../Images/home_page_images/facebook.svg" alt="facebook" draggable="false"></a>
+                <a href="https://www.tiktok.com"><img src="../Images/home_page_images/tiktok.svg" alt="tiktok" draggable="false"></a>
+                <a href="https://www.twitter.com"><img src="../Images/home_page_images/twitter.svg" alt="twitter" draggable="false"></a>
+            </div>
+
+            <div class="copyright">
+                <p>Floradise © s.r.l</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <link rel="shortcut icon" href="../Images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../CSS_files/user.css">
+    <script src="../JS_files/user.js" defer></script>
+
+
+    <script src="https://kit.fontawesome.com/4e5a426b26.js" crossorigin="anonymous"></script>
+
+    <!--Swiper.js-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!--Cart css and js-->
+    <link rel="stylesheet" href="../CSS_files/cart.css">
+    <script src="../JS_files/cart.js" defer></script>
+
+</head>
+<body>
+    
+    <header>
+        <nav class="nav1">
+            <div class="nav-left">
+                <a href="index.html"><img src="../Images/logo.png" alt="logo" class="logo" draggable="false"></a>
+                <div class="nav-links">
+                    <ul class="nav-links-list">
+                        <li class="nav-link-item"><a href="index.html">Acasă</a></li>
+                        <li class="nav-link-item"><a href="products.html">Produse</a></li>
+                        <li class="nav-link-item"><a href="services.html">Servicii</a></li>
+                        <li class="nav-link-item"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-links-right">
+
+                <div class="nav-cart" id="navCart1">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+
+                <a href="#">
+                    <div class="nav-user">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="nav2">
+        <div class="nav-left">
+            <a href="index.html"><img src="../Images/logo.png" alt="logo" class="logo" draggable="false"></a>
+            <div class="nav-links">
+                <ul class="nav-links-list">
+                    <li class="nav-link-item"><a href="index.html">Acasă</a></li>
+                    <li class="nav-link-item"><a href="products.html">Produse</a></li>
+                    <li class="nav-link-item"><a href="services.html">Servicii</a></li>
+                    <li class="nav-link-item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-links-right">
+
+            <div class="nav-cart" id="navCart2">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+
+            <a href="#">
+                <div class="nav-user" >
+                    <i class="fa-regular fa-user"></i>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <nav class="nav3">
+        <a href="index.html">
+            <div class="small-screen-size-nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Acasă</span>
+            </div>
+        </a>
+        <a href="products.html">
+            <div class="small-screen-size-nav-item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Produse</span>
+            </div>
+        </a>
+        <a href="services.html">
+            <div class="small-screen-size-nav-item">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                Servicii
+            </div>
+        </a>
+        <a href="contact.html">
+            <div class="small-screen-size-nav-item nav3-edge-elem">
+                <i class="fa-solid fa-envelope"></i>
+                Contact
+            </div>
+        </a>
+    </nav>
+
+
+    <div class="shopping-cart-overlay"></div>
+        <div class="shopping-cart-container">
+            <div class="cart-header">
+                <h1>Coș</h1>
+                <i class="fa-solid fa-xmark" id="closeCartBtn"></i>
+            </div>
+            <div class="cart-items-box">
+                <div class="empty-cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Coșul este gol</span>
+                </div>
+            
+                <div class="swiper swiperCart">
+                    <div class="swiper-wrapper cart-swiper-wrapper">
+                        <!--Slides are generated in js-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-details-container">
+                <p>Detalii comandă</p>
+                <form action="#">
+                    <div class="adress">
+                        <i class="fa-solid fa-location-dot details-icon"></i>
+                        <input type="text" placeholder="Adresă" class="details-input">
+                        <select name="City" id="cityPicker">
+                            <option value="" hidden>Oraș</option>
+                            <option value="Chisinau">Chișinău</option>
+                            <option value="Cricova">Cricova</option>
+                            <option value="Ialoveni">Ialoveni</option>
+                            <option value="Ciorescu">Ciorescu</option>
+                            <option value="Anenii Noi">Anenii Noi</option>
+                        </select>
+                    </div>
+
+                    <div class="phone-name">
+                        <div class="phone details-field">
+                            <i class="fa-solid fa-phone details-icon"></i>
+                            <input type="text" placeholder="Telefon" class="details-input">
+                        </div>
+                        <div class="name details-field">
+                            <i class="fa-solid fa-user details-icon"></i>
+                            <input type="text" placeholder="Nume" class="details-input">
+                        </div>
+                    </div>
+
+                    <div class="card-number details-field">
+                        <i class="fa-regular fa-credit-card details-icon"></i>
+                        <input type="number" placeholder="Număr card" class="details-input card-number-input" maxlength="16">
+                        <input type="number" placeholder="CVC" class="details-input cvc-input" maxlength="3">
+                    </div>
+
+                    <div class="date-owner">
+                        <div class="date details-field">
+                            <i class="fa-regular fa-calendar details-icon"></i>
+                            <input type="text" placeholder="00/00" class="details-input">
+                        </div>
+                        <div class="owner details-field">
+                            <i class="fa-regular fa-id-card details-icon"></i>
+                            <input type="text" placeholder="Deținător" class="details-input">
+                        </div>
+                    </div>
+
+                    <div class="total">
+                        <span>Total</span>
+                        <span class="total-order-value">0 MDL</span>
+                    </div>
+                    <hr>
+                    <input type="submit" value="Comandă acum" id="submitOrder">
+                </form>
+                
+
+            </div>
+
+        </div>
+
+
+
+        <div class="head-bar">
+            Detalii utilizator
+            <a href="index.html"><button id="signOut">Delogare</button></a>
+        </div>
+
+
+        <section class="user-details-section">
+
+            <div class="user-details-container">
+                <form action="#">
+
+                    <h1>Informații utilizator</h1>
+                    <div class="input-row">
+                        <input type="text" id="nameField" placeholder="Nume">
+                        <input type="text" id="surnameField" placeholder="Prenume">
+                    </div>
+
+                    <div class="input-row input-row-m30">
+                        <input type="email" id="emailField" placeholder="Email">
+                        <input type="text" id="phoneField" placeholder="Telefon">
+                    </div>
+
+                    <h1>Adresă de expediere</h1>
+
+                    <div class="input-row">
+                        <input type="text" id="regionField" placeholder="Raion">
+                        <div class="input-city-pcode">
+                            <input type="text" id="cityField" placeholder="Oraș">
+                            <input type="text" id="pcodeField" placeholder="Cod poștal">
+                        </div>
+                    </div>
+
+                    <div class="input-row input-row-m30">
+                        <input type="text" id="streetField" placeholder="Strada">
+                        <input type="text" id="apartmentField" placeholder="Apartament (opțional)">
+                    </div>
+
+                    <input type="submit" value="Salvează">
+
+                </form>
+            </div>
+
+            <div class="order-details-container">
+
+                <h1>Comenzi active</h1>
+
+                <div class="div-active-order">
+                    <h1>Nu aveți nici o comandă activă</h1>
+                    <a href="products.html"><span>Vedeți produsele</span></a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer>
+            <div class="footer-content">
+                <div class="section-title">
+                    <h6>Abonare</h6>
+                    <h1>Buletin Informativ</h1>
+                    <p>Nu ratați cele mai noi noutăți, oferte exclusive și inspirație 
+                        florală creativă - abonați-vă acum la buletinul nostru informativ 
+                        și bucurați-vă de surprizele noastre florale direct în inbox-ul dvs.!
+                    </p>
+                </div>
+    
+                <form action="#" class="newsletter">
+                    <input type="text" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" placeholder="Email..." required>
+                    <input type="submit" value="Abonare">
+                </form>
+    
+                <hr>
+    
+                <div class="footer-social-media-icons">
+                    <a href="https://www.instagram.com"><img src="../Images/home_page_images/instagram.svg" alt="instagram" draggable="false"></a>
+                    <a href="https://www.linkedin.com"><img src="../Images/home_page_images/linkedin.svg" alt="linkedin" draggable="false"></a>
+                    <a href="https://www.facebook.com"><img src="../Images/home_page_images/facebook.svg" alt="facebook" draggable="false"></a>
+                    <a href="https://www.tiktok.com"><img src="../Images/home_page_images/tiktok.svg" alt="tiktok" draggable="false"></a>
+                    <a href="https://www.twitter.com"><img src="../Images/home_page_images/twitter.svg" alt="twitter" draggable="false"></a>
+                </div>
+    
+                <div class="copyright">
+                    <p>Floradise © s.r.l</p>
+                </div>
+            </div>
+        </footer>
+
+</body>
+</html>
